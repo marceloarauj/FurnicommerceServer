@@ -6,6 +6,6 @@ const routes = new Routes();
 
 routes.routes(app);
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Servidor inicializado`)
 })
