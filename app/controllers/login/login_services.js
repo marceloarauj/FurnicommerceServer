@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const db = require('../../configurations/database')
 const {Pool} = require('pg')
 
 let connectionString = {
