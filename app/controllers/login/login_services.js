@@ -16,8 +16,8 @@ class LoginServices{
     register(){
     }
     
-    getAll(){
-        pool.query('SELECT * FROM USUARIO',(error,results)=>{
+    async getAll(){
+        await pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             console.log(results.rows);
         });
