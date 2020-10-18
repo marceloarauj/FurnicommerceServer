@@ -17,13 +17,13 @@ class LoginServices{
     }
     
     getAll(){
-        pool.query('SELECT * FROM MOVEIS',(error,results)=>{
+        pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             if(error){
                 throw error;
             }
 
-            console.log(results.rows);
+            return results.rows;
         });
     }
 
