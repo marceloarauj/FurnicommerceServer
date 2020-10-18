@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const pool = require('../../configurations/database');
+const {pool} = require('../../configurations/database');
 
 class LoginServices{
 
