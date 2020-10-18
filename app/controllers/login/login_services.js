@@ -17,14 +17,16 @@ class LoginServices{
     }
     
     getAll(){
-        let values = pool.query('SELECT * FROM USUARIO',(error,results)=>{
+        let values;
+
+        pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             if(error){
                 throw error;
             }
-
-            return results.rows;
+            values = results.rows;
         });
+        
         return values;
     }
 
