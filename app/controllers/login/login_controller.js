@@ -33,7 +33,7 @@ class LoginController{
 
         app.route("/users").get(
             (request,response)=>{
-                console.log(new LoginServices().getAll());
+                new LoginServices().getAll();
                 response.status(200).send({"teste":"sucesso"});
             }
         )
