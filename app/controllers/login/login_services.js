@@ -16,8 +16,8 @@ class LoginServices{
     register(){
     }
     
-    async getAll(){
-        await pool.query('SELECT * FROM MOVEIS',(error,results)=>{
+    getAll(){
+        pool.query('SELECT * FROM MOVEIS',(error,results)=>{
 
             if(error){
                 throw error;
