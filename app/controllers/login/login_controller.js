@@ -34,7 +34,6 @@ class LoginController{
         app.route("/users").get(
             (request,response)=>{
                 var users = new LoginServices().getAll();
-                console.log(users);
                 response.status(200).json(users);
             }
         )

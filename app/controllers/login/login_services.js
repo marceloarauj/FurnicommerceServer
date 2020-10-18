@@ -17,7 +17,7 @@ class LoginServices{
     }
     
     getAll(){
-        pool.query('SELECT * FROM USUARIO',(error,results)=>{
+        let values = pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             if(error){
                 throw error;
@@ -25,6 +25,7 @@ class LoginServices{
 
             return results.rows;
         });
+        return values;
     }
 
     encrypt(pwd){
