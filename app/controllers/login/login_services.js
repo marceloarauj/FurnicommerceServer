@@ -16,18 +16,15 @@ class LoginServices{
     register(){
     }
     
-    async getAll(){
-        let values={};
+    getAll(response){
 
-        await pool.query('SELECT * FROM USUARIO',(error,results)=>{
+        pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             if(error){
                 throw error;
             }
-            values = results.rows;
+            response.status(200).json(results.rows);
         });
-        console.log(values);
-        return values;
     }
 
     encrypt(pwd){
