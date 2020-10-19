@@ -16,10 +16,10 @@ class LoginServices{
     register(){
     }
     
-    getAll(){
+    async getAll(){
         let values={};
 
-        pool.query('SELECT * FROM USUARIO',(error,results)=>{
+        await pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
             if(error){
                 throw error;

@@ -33,7 +33,7 @@ class LoginController{
 
         app.route("/users").get(
             (request,response)=>{
-                var users = new LoginServices().getAll();
+                var users = await new LoginServices().getAll();
                 response.status(200).json(users);
             }
         )
