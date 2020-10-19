@@ -17,7 +17,7 @@ class LoginServices{
     }
     
     getAll(){
-        let values;
+        let values={};
 
         pool.query('SELECT * FROM USUARIO',(error,results)=>{
 
@@ -26,7 +26,7 @@ class LoginServices{
             }
             values = results.rows;
         });
-        
+        console.log(values);
         return values;
     }
 
