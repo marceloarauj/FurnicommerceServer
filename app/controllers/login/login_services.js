@@ -35,6 +35,9 @@ class LoginServices{
                     ,'${body.senha}'
                     ,'${body.endereco}'
                     )`,(error,results)=>{
+                        if(error){
+                            throw error
+                        }
                         response.status(200).send({"mensagem":"usuario cadastrado !"});
                     });
             }
