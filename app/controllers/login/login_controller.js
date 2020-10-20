@@ -20,7 +20,7 @@ class LoginController{
             }
         );
         app.route("/register").post(
-            (request,response)=>{ console.log(request.body);
+            (request,response)=>{
                 register = new LoginServices().register(request.body,response);
 
             }
