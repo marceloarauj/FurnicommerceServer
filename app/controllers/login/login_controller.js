@@ -21,13 +21,8 @@ class LoginController{
         );
         app.route("/register").post(
             (request,response)=>{
-                register = new LoginServices().register(request.body);
+                register = new LoginServices().register(request.body,response);
 
-                if(register){
-                    response.status(200).send({"mensagem":"Cadastro Realizado com sucesso"});
-                }else{
-                    response.status(400).send({"erro":"Não foi possível realizar o cadastro"});                    
-                }
             }
         );
 
