@@ -30,7 +30,7 @@ class LoginServices{
                     )
                 VALUES (
                     '${body.nome}'
-                    ,${body.cpf}'
+                    ,'${body.cpf}'
                     ,'${body.email}'
                     ,'${body.senha}'
                     ,'${body.endereco}'
