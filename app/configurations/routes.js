@@ -1,5 +1,6 @@
 const ListaController = require("../controllers/lista/lista_controller");
 const LoginController = require("../controllers/login/login_controller");
+const LoginController = require("../controllers/venda/venda_controller");
 
 class Routes{
 

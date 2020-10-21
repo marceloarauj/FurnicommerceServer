@@ -6,5 +6,11 @@ class VendaController{
 
     routes(app){
 
+        app.route('/venda').post(
+            (request,response)=>{
+
+            }
+        )
     }
 }
+module.exports = VendaController;
