@@ -6,6 +6,7 @@ class Routes{
     routes(app){
         new LoginController(app);
         new ListaController(app);
+        new VendaController(app);
     }
 }
 module.exports = Routes;
