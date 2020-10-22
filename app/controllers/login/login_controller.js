@@ -7,18 +7,14 @@ class LoginController{
     }
 
     routes(app){
-        app.route("/login").get(
+
+        app.route("/login").post(
             (request,response)=>{
 
-                login = new LoginServices().login(request.body);
-
-                if(login){
-                    response.status(200).send({teste:"te2ste",abc:"as2d"});
-                }else{
-                    response.status(400).send({"erro":"login ou senha incorretos"});
-                }
+                new LoginServices().login(request.body,response);
             }
         );
+
         app.route("/register").post(
             (request,response)=>{
                 new LoginServices().register(request.body,response);
