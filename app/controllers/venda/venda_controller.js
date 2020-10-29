@@ -14,7 +14,7 @@ class VendaController{
             }
         );
 
-        app.route('/getVendas').get(
+        app.route('/vendas').get(
             (request,response)=>{
                 new VendaServices().obterTodos(response)
             }
