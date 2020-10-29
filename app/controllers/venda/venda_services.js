@@ -19,6 +19,9 @@ class VendaServices{
                 ${body.imagem}
             `,
             (error,results)=>{
+                if(error){
+                    throw error
+                }
                 response.status(200).send("Venda cadastrada !")
             }
         )
@@ -39,6 +42,9 @@ class VendaServices{
             join STATUS s  on s.STATUS_ID = v.STATUS_ID
             `,
             (error,results)=>{
+                if(error){
+                    throw error
+                }
                 response.status(200).json(results.rows);
             }
         )
