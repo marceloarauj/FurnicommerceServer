@@ -12,7 +12,7 @@ class VendaServices{
                 DATA_VENDA,
                 IMAGEM
             )VALUES
-                ${body.uid},
+                ${parseInt(body.uid)},
                 ${body.movelId},
                 ${1},
                 ${new Date()},
