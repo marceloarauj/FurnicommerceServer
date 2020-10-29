@@ -15,7 +15,7 @@ class VendaServices{
                 '${parseInt(body.uid)}',
                 '${body.movelId}',
                 ${1},
-                ${new Date().toString()},
+                '${new Date().toString()}',
                 '${body.imagem}'
             )`,
             (error,results)=>{
