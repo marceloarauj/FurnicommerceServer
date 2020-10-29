@@ -12,11 +12,11 @@ class VendaServices{
                 DATA_VENDA,
                 IMAGEM
             )VALUES(
-                ${parseInt(body.uid)},
-                ${body.movelId},
+                '${parseInt(body.uid)}',
+                '${body.movelId}',
                 ${1},
                 ${new Date()},
-                ${body.imagem}
+                '${body.imagem}'
             )`,
             (error,results)=>{
                 if(error){
