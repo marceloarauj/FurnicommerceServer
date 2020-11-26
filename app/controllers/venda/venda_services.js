@@ -6,7 +6,7 @@ class VendaServices{
 
     novaVenda(body,response){
 
-        var date = moment(Date.now()).format('hh:mm:ss');
+        var date = moment(Date.now()).format();
         pool.query(
             `INSERT INTO VENDA(
                 USUARIO_ID,
