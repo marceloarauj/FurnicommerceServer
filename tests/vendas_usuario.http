@@ -1,0 +1,6 @@
+POST https://furnicommerce.herokuapp.com/vendaUsuario
+Content-Type: application/json
+
+{
+    "uid":8
+}
