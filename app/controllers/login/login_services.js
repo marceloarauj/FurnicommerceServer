@@ -9,7 +9,7 @@ class LoginServices {
 
     login(body, response) {
 
-        pool.query(`SELECT NOME,CPF,EMAIL FROM USUARIO 
+        pool.query(`SELECT USUARIO_ID,NOME,CPF,EMAIL FROM USUARIO 
                         WHERE EMAIL = '${body.email}' 
                         AND SENHA = '${this.encrypt(body.senha)}'`,
 
