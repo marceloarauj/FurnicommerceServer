@@ -52,6 +52,29 @@ class VendaServices{
             }
         )
     }
+    obterVendasUsuario(response,body){
+        pool.query(
+            `
+            SELECT m.TIPO,
+                   u.NOME,
+                   s.NOME,
+                   v.DATA_VENDA,
+                   v.IMAGEM   
+
+            FROM VENDA v 
+            join USUARIO u on v.USUARIO_ID = u.USUARIO_ID
+            join MOVEIS m  on m.MOVEL_ID = v.MOVEL_ID
+            join STATUS s  on s.STATUS_ID = v.STATUS_ID
+            WHERE USUARIO_ID = ${body.uid}
+            `,
+            (error,results)=>{
+                if(error){
+                    throw error
+                }
+                response.status(200).json(results.rows);
+            }
+        )
+    }
 }
 
 module.exports = VendaServices;

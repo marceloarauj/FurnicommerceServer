@@ -19,6 +19,11 @@ class VendaController{
                 new VendaServices().obterTodos(response)
             }
         );
+        app.route('/vendaUsuario').post(
+            (request,response) =>{
+                new VendaServices().obterVendasUsuario(response,request.body)
+            }
+        );
     }
 }
 module.exports = VendaController;
