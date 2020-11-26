@@ -65,7 +65,7 @@ class VendaServices{
             join USUARIO u on v.USUARIO_ID = u.USUARIO_ID
             join MOVEIS m  on m.MOVEL_ID = v.MOVEL_ID
             join STATUS s  on s.STATUS_ID = v.STATUS_ID
-            WHERE u.USUARIO_ID = '${body.uid}'
+            WHERE u.USUARIO_ID = '${parseInt(body.uid)}'
             `,
             (error,results)=>{
                 if(error){
