@@ -1,9 +1,12 @@
 const {pool} = require('../../configurations/database');
+var moment = require('moment');
 
 class VendaServices{
 
 
     novaVenda(body,response){
+
+        var date = moment(Date.now()).format('hh:mm:ss');
         pool.query(
             `INSERT INTO VENDA(
                 USUARIO_ID,
@@ -15,7 +18,7 @@ class VendaServices{
                 '${parseInt(body.uid)}',
                 '${body.movelId}',
                 ${1},
-                '${new Date()}',
+                '${date}',
                 '${body.imagem}'
             )`,
             (error,results)=>{
