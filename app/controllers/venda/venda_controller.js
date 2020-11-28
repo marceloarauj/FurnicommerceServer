@@ -29,6 +29,11 @@ class VendaController{
                 new VendaServices().obterVendaPorId(request.body,response)
             }
         );
+        app.route('/comprarMovel').post(
+            (request,response) =>{
+                new VendaServices().comprarMovel(request.body,response)
+            }            
+        )
     }
 }
 module.exports = VendaController;

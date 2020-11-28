@@ -1,0 +1,7 @@
+POST https://furnicommerce.herokuapp.com/comprarMovel
+Content-Type: application/json
+
+{
+    "uid":8,
+    "venda_id": 11
+}
