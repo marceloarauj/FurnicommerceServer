@@ -1,0 +1,10 @@
+POST https://furnicommerce.herokuapp.com/register
+Content-Type: application/json
+
+{
+    "nome":"Administrador",
+    "cpf":"300.300.300-30",
+    "email":"adm@adm.com",
+    "senha":"adm",
+    "endereco":"Av. Teste do sul"
+}

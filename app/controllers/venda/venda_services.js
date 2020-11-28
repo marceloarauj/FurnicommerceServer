@@ -55,9 +55,9 @@ class VendaServices{
     obterVendasUsuario(response,body){
         pool.query(
             `
-            SELECT m.TIPO,
-                   u.NOME,
-                   s.NOME,
+            SELECT m.MOVEL_ID (movel),
+                   u.NOME (usuario),
+                   s.STATUS_ID (status_venda),
                    v.DATA_VENDA,
                    v.IMAGEM   
 
