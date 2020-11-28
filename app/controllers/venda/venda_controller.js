@@ -24,6 +24,11 @@ class VendaController{
                 new VendaServices().obterVendasUsuario(response,request.body)
             }
         );
+        app.route('/vendaId').post(
+            (request,response) =>{
+                new VendaServices().obterVendaPorId(request.body,response)
+            }
+        );
     }
 }
 module.exports = VendaController;
