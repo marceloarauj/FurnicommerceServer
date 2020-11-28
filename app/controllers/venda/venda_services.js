@@ -34,9 +34,9 @@ class VendaServices{
         pool.query(`
             UPDATE VENDA,
             SET STATUS_ID = 2,
-                USUARIO_COMPRADOR_ID = ${body.uid}
-            WHERE VENDA_ID = ${body.venda_id}`
-            
+                USUARIO_COMPRADOR_ID = '${body.uid}'
+            WHERE VENDA_ID = '${body.venda_id}'`
+
             ,(error,results)=>{
                 if(error){
                     throw error
