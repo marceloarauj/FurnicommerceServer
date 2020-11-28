@@ -16,7 +16,7 @@ class LoginServices {
             (error, results) => {
 
                 if (results.rows == 0) {
-                    response.status(403).send({ "error": "Login ou senha incorretos" });
+                    response.status(403).send([{ "error": "Login ou senha incorretos" }]);
                 }else{
                     response.status(200).json(results.rows);
                 }
