@@ -32,7 +32,7 @@ class VendaServices{
 
     comprarMovel(body,reponse){
         pool.query(`
-            UPDATE VENDA,
+            UPDATE VENDA
             SET STATUS_ID = 2,
                 USUARIO_COMPRADOR_ID = '${body.uid}'
             WHERE VENDA_ID = '${body.venda_id}'`
