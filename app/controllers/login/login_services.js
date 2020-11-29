@@ -39,6 +39,7 @@ class LoginServices {
                     ,EMAIL
                     ,SENHA
                     ,ENDERECO
+                    ,PERFIL
                     )
                 VALUES (
                     '${body.nome}'
@@ -46,6 +47,7 @@ class LoginServices {
                     ,'${body.email}'
                     ,'${this.encrypt(body.senha)}'
                     ,'${body.endereco}'
+                    ,'${2}'
                     )`, (error, results) => {
                         if (error) {
                             throw error
