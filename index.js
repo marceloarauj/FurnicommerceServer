@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const routes = new Routes();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit:'50mb'}))
 
 routes.routes(app);
 
