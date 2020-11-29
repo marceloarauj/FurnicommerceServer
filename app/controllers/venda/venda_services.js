@@ -25,7 +25,7 @@ class VendaServices{
                 if(error){
                     throw error
                 }
-                response.status(200).send("Venda cadastrada !")
+                response.status(200).json([{"message":"Venda cadastrada !"}])
             }
         )
     }
@@ -41,7 +41,7 @@ class VendaServices{
                 if(error){
                     throw error
                 }
-                reponse.status(200).send("Móvel comprado !")
+                reponse.status(200).json([{"message":"Móvel comprado !"}])
         })
     }
 
