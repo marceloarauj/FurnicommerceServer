@@ -30,7 +30,7 @@ class LoginServices {
         pool.query(`SELECT * FROM USUARIO WHERE EMAIL = '${body.email}'`,
             (error, results) => {
                 if (results.rowCount > 0) {
-                    response.status(400).send({ "mensagem": "Já existe usuário com este e-mail" });
+                    response.status(400).send([{ "mensagem": "Já existe usuário com este e-mail" }]);
                 } else {
 
                     pool.query(`INSERT INTO USUARIO (
@@ -52,7 +52,7 @@ class LoginServices {
                         if (error) {
                             throw error
                         }
-                        response.status(200).send({ "mensagem": "usuario cadastrado !" });
+                        response.status(200).send([{ "mensagem": "usuario cadastrado !" }]);
                     });
                 }
 
