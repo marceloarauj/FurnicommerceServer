@@ -13,12 +13,16 @@ class VendaServices{
                 MOVEL_ID,
                 STATUS_ID,
                 DATA_VENDA,
+                VALOR,
+                OBSERVACAO,
                 IMAGEM
             )VALUES(
                 '${parseInt(body.uid)}',
                 '${body.movelId}',
                 ${1},
                 '${date}',
+                '${body.valor}',
+                '${body.observacao}',
                 '${body.imagem}'
             )`,
             (error,results)=>{
