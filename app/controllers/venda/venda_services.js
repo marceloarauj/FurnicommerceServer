@@ -54,7 +54,10 @@ class VendaServices{
             `
             SELECT m.MOVEL_ID as movel,
                    s.STATUS_ID as status_venda,
-                   v.DATA_VENDA
+                   v.DATA_VENDA,
+                   v.VALOR,
+                   v.OBSERVACAO,
+                   v.VENDA_ID
 
             FROM VENDA v 
             join USUARIO u on v.USUARIO_ID = u.USUARIO_ID
