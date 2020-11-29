@@ -8,7 +8,7 @@ const routes = new Routes();
 app.use(bodyParser.json({limit:'50mb'}))
 
 routes.routes(app);
-
+//s
 app.listen(process.env.PORT || 7000, () => {
     console.log(`Servidor inicializado`)
 })
