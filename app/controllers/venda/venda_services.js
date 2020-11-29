@@ -101,6 +101,8 @@ class VendaServices{
                    u.NOME as usuario,
                    s.STATUS_ID as status_venda,
                    v.DATA_VENDA,
+                   v.OBSERVACAO,
+                   v.VALOR,
                    v.IMAGEM   
 
             FROM VENDA v 
