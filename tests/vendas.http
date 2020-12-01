@@ -1,0 +1,2 @@
+GET https://furnicommerce.herokuapp.com/vendas
+Content-Type: application/json
