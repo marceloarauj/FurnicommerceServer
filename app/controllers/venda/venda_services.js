@@ -48,7 +48,18 @@ class VendaServices{
                 reponse.status(200).json([{"message":"Móvel comprado ! "}])
         })
     }
-
+    entregar(body,response){
+        pool.query(`
+            UPDATE VENDA
+            SET STATUS_ID = 3
+            WHERE VENDA_ID = '${body.venda_id}'
+        `,(error,results)=>{
+            if(error){
+                throw error
+            }
+            response.status(200).json([{"message":"Situacao Alterada"}])
+        })
+    }
     obterTodos(response){
         pool.query(
             `
@@ -84,7 +95,7 @@ class VendaServices{
             join USUARIO u on v.USUARIO_ID = u.USUARIO_ID
             join MOVEIS m  on m.MOVEL_ID = v.MOVEL_ID
             join STATUS s  on s.STATUS_ID = v.STATUS_ID
-            WHERE u.USUARIO_ID = '${parseInt(body.uid)}'
+            WHERE v.USUARIO_COMPRADOR_ID = '${parseInt(body.uid)}'
             `,
             (error,results)=>{
                 if(error){

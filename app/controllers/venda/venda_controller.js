@@ -34,6 +34,11 @@ class VendaController{
                 new VendaServices().comprarMovel(request.body,response)
             }            
         )
+        app.route('/entregar').post(
+            (request,response) =>{
+                new VendaServices().entregar(request.body,response)
+            }            
+        )
     }
 }
 module.exports = VendaController;
