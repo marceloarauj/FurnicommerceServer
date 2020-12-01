@@ -45,7 +45,7 @@ class VendaServices{
                 if(error){
                     throw error
                 }
-                reponse.status(200).json([{"message":"Móvel comprado !"}])
+                reponse.status(200).json([{"message":"Móvel comprado ! "}])
         })
     }
 
